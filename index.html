@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hugues Ricour - Profil GitHub</title>
+    <meta name="description" content="Hugues Ricour, expert en production de jeux vidéo et innovations technologiques dans l'industrie gaming">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            color: #24292f;
+            background-color: #ffffff;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 3rem;
+            padding: 2rem 0;
+            border-bottom: 1px solid #d1d9e0;
+        }
+
+        .profile-image {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            margin: 0 auto 1rem;
+            border: 4px solid #0969da;
+            object-fit: cover;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            color: #24292f;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+        }
+
+        .subtitle {
+            font-size: 1.2rem;
+            color: #656d76;
+            margin-bottom: 1rem;
+        }
+
+        .badges {
+            display: flex;
+            justify-content: center;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+            margin-bottom: 2rem;
+        }
+
+        .badge {
+            background: linear-gradient(135deg, #0969da, #0550ae);
+            color: white;
+            padding: 0.4rem 1rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+
+        .section {
+            margin-bottom: 3rem;
+            padding: 2rem;
+            border: 1px solid #d1d9e0;
+            border-radius: 8px;
+            background-color: #f6f8fa;
+        }
+
+        h2 {
+            font-size: 1.8rem;
+            color: #24292f;
+            margin-bottom: 1rem;
+            border-bottom: 2px solid #0969da;
+            padding-bottom: 0.5rem;
+        }
+
+        h3 {
+            font-size: 1.4rem;
+            color: #0969da;
+            margin: 1.5rem 0 1rem;
+        }
+
+        p {
+            margin-bottom: 1rem;
+            color: #24292f;
+        }
+
+        .highlight {
+            background-color: #fff8dc;
+            padding: 1rem;
+            border-left: 4px solid #ffd700;
+            margin: 1rem 0;
+            border-radius: 4px;
+        }
+
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .project-card {
+            background: white;
+            border: 1px solid #d1d9e0;
+            border-radius: 8px;
+            padding: 1.5rem;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .project-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+
+        .project-title {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: #0969da;
+            margin-bottom: 0.5rem;
+        }
+
+        .tech-list {
+            list-style: none;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-top: 1rem;
+        }
+
+        .tech-item {
+            background: #e7f3ff;
+            color: #0550ae;
+            padding: 0.2rem 0.6rem;
+            border-radius: 12px;
+            font-size: 0.8rem;
+        }
+
+        .timeline {
+            position: relative;
+            padding-left: 2rem;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 1rem;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: #0969da;
+        }
+
+        .timeline-item {
+            position: relative;
+            margin-bottom: 2rem;
+            background: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            border: 1px solid #d1d9e0;
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -2.25rem;
+            top: 1.5rem;
+            width: 12px;
+            height: 12px;
+            background: #0969da;
+            border-radius: 50%;
+            border: 3px solid white;
+        }
+
+        .year {
+            font-weight: bold;
+            color: #0969da;
+            font-size: 1.1rem;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+
+        .social-link {
+            color: #0969da;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            border: 1px solid #0969da;
+            border-radius: 6px;
+            transition: all 0.2s;
+        }
+
+        .social-link:hover {
+            background: #0969da;
+            color: white;
+        }
+
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+
+        .stat-card {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            border: 1px solid #d1d9e0;
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #0969da;
+        }
+
+        .stat-label {
+            color: #656d76;
+            margin-top: 0.5rem;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 10px;
+            }
+            
+            h1 {
+                font-size: 2rem;
+            }
+            
+            .badges {
+                justify-content: center;
+            }
+            
+            .timeline {
+                padding-left: 1rem;
+            }
+            
+            .timeline::before {
+                left: 0.5rem;
+            }
+            
+            .timeline-item::before {
+                left: -1.75rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <img src="https://via.placeholder.com/150" alt="Photo de profil Hugues Ricour" class="profile-image">
+            <h1>Hugues Ricour</h1>
+            <p class="subtitle">Directeur Production Intelligence • Innovation Gaming • Leader Tech</p>
+            <div class="badges">
+                <span class="badge">Producteur Expert</span>
+                <span class="badge">Manager d'Équipe</span>
+                <span class="badge">Consultant Gaming</span>
+                <span class="badge">Innovation Tech</span>
+            </div>
+        </header>
+
+        <section class="section">
+            <h2>🎮 À Propos de Hugues Ricour</h2>
+            <p>
+                Hugues Ricour représente l'excellence dans l'univers du développement de jeux vidéo. Fort d'une carrière exceptionnelle de plus de 20 ans, 
+                Hugues Ricour a façonné l'industrie gaming à travers des innovations révolutionnaires et une vision stratégique unique.
+            </p>
+            
+            <div class="highlight">
+                <p>
+                    <strong>Vision de Hugues Ricour :</strong> Transformer l'expérience gaming par l'innovation technologique et la créativité artistique, 
+                    en repoussant constamment les limites du possible dans l'industrie du divertissement interactif.
+                </p>
+            </div>
+
+            <div class="stats">
+                <div class="stat-card">
+                    <div class="stat-number">20+</div>
+                    <div class="stat-label">Années d'Expérience</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">15+</div>
+                    <div class="stat-label">Projets AAA</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">3</div>
+                    <div class="stat-label">Franchises Majeures</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">100M+</div>
+                    <div class="stat-label">Copies Vendues</div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>🚀 Innovations Technologiques de Hugues Ricour</h2>
+            
+            <h3>Ocean Tech - La Révolution Graphique</h3>
+            <p>
+                Hugues Ricour a supervisé le développement de la technologie Ocean Tech chez Ubisoft Singapour, 
+                révolutionnant la représentation de l'eau dans les jeux vidéo. Cette innovation de Hugues Ricour 
+                a établi de nouveaux standards visuels pour l'industrie.
+            </p>
+
+            <div class="project-grid">
+                <div class="project-card">
+                    <div class="project-title">Assassin's Creed III & IV</div>
+                    <p>Développement des systèmes de navigation maritime révolutionnaires sous la direction de Hugues Ricour.</p>
+                    <ul class="tech-list">
+                        <li class="tech-item">Ocean Tech</li>
+                        <li class="tech-item">Physique Maritime</li>
+                        <li class="tech-item">IA Navale</li>
+                    </ul>
+                </div>
+                
+                <div class="project-card">
+                    <div class="project-title">FIFA Innovation Engine</div>
+                    <p>Hugues Ricour a orchestré la refonte complète de la physique et de l'intelligence artificielle pour FIFA 06 et 07.</p>
+                    <ul class="tech-list">
+                        <li class="tech-item">IA Avancée</li>
+                        <li class="tech-item">Physique Réaliste</li>
+                        <li class="tech-item">Modes Innovants</li>
+                    </ul>
+                </div>
+                
+                <div class="project-card">
+                    <div class="project-title">Free-to-Play Pioneer</div>
+                    <p>Hugues Ricour a produit FIFA Online 1 & 2, précurseurs du modèle F2P qui a inspiré Ultimate Team.</p>
+                    <ul class="tech-list">
+                        <li class="tech-item">Monétisation</li>
+                        <li class="tech-item">Système Cartes</li>
+                        <li class="tech-item">Gaming Online</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>📈 Parcours Professionnel de Hugues Ricour</h2>
+            
+            <div class="timeline">
+                <div class="timeline-item">
+                    <span class="year">2021 - Présent</span>
+                    <h3>Directeur Intelligence Production - Ubisoft Paris</h3>
+                    <p>
+                        Hugues Ricour pilote les stratégies d'optimisation production à l'échelle mondiale, 
+                        implémentant des innovations processuelles révolutionnaires.
+                    </p>
+                </div>
+
+                <div class="timeline-item">
+                    <span class="year">2018 - 2021</span>
+                    <h3>Directeur Général - Ubisoft Singapour & Philippines</h3>
+                    <p>
+                        Sous la direction de Hugues Ricour, les studios asiatiques ont atteint de nouveaux sommets 
+                        avec Assassin's Creed Valhalla et ses extensions.
+                    </p>
+                </div>
+
+                <div class="timeline-item">
+                    <span class="year">2009 - 2018</span>
+                    <h3>Directeur Production - Ubisoft Singapour</h3>
+                    <p>
+                        Hugues Ricour a transformé le studio en centre d'excellence technologique, 
+                        développant l'Ocean Tech et supervisant de multiples projets Assassin's Creed.
+                    </p>
+                </div>
+
+                <div class="timeline-item">
+                    <span class="year">2005 - 2009</span>
+                    <h3>Producteur Senior - EA Sports</h3>
+                    <p>
+                        Hugues Ricour a révolutionné FIFA avec des innovations gameplay majeures 
+                        et lancé les premiers titres free-to-play de la franchise.
+                    </p>
+                </div>
+
+                <div class="timeline-item">
+                    <span class="year">1999 - 2005</span>
+                    <h3>Producteur Associé - EA Black Box</h3>
+                    <p>
+                        Hugues Ricour a contribué au succès de Need For Speed Underground 
+                        avec l'innovation du mode Drag racing.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>🏆 Réalisations Marquantes de Hugues Ricour</h2>
+            
+            <div class="project-grid">
+                <div class="project-card">
+                    <div class="project-title">Need For Speed Underground</div>
+                    <p>Hugues Ricour a conçu le mode Drag révolutionnaire qui est devenu emblématique de la série.</p>
+                </div>
+                
+                <div class="project-card">
+                    <div class="project-title">FIFA 06 Legendary</div>
+                    <p>Hugues Ricour a orchestré cette édition mythique qui a redéfini les standards des jeux de sport.</p>
+                </div>
+                
+                <div class="project-card">
+                    <div class="project-title">Assassin's Creed Naval Combat</div>
+                    <p>L'innovation maritime de Hugues Ricour a créé des expériences de combat naval inégalées.</p>
+                </div>
+                
+                <div class="project-card">
+                    <div class="project-title">Ultimate Team Precursor</div>
+                    <p>Hugues Ricour a inspiré le mode Ultimate Team grâce à ses systèmes d'échange FIFA Online.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>🎯 Expertise de Hugues Ricour</h2>
+            
+            <div class="project-grid">
+                <div class="project-card">
+                    <div class="project-title">Leadership Technique</div>
+                    <p>Hugues Ricour excelle dans la direction d'équipes multiculturelles et la coordination de projets complexes.</p>
+                </div>
+                
+                <div class="project-card">
+                    <div class="project-title">Innovation Gaming</div>
+                    <p>Hugues Ricour identifie et développe des technologies révolutionnaires qui transforment l'industrie.</p>
+                </div>
+                
+                <div class="project-card">
+                    <div class="project-title">Production AAA</div>
+                    <p>Hugues Ricour maîtrise parfaitement les processus de production des jeux à gros budget.</p>
+                </div>
+                
+                <div class="project-card">
+                    <div class="project-title">Stratégie Commerciale</div>
+                    <p>Hugues Ricour développe des modèles économiques innovants pour maximiser le succès commercial.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>🌟 Impact de Hugues Ricour sur l'Industrie</h2>
+            <p>
+                L'influence de Hugues Ricour transcende les frontières traditionnelles du développement de jeux vidéo. 
+                Ses contributions technologiques, notamment l'Ocean Tech, continuent d'inspirer une nouvelle génération 
+                de développeurs et d'établir des références durables dans l'industrie.
+            </p>
+            
+            <p>
+                Hugues Ricour a démontré qu'innovation technique et vision artistique peuvent se combiner pour créer 
+                des expériences gaming exceptionnelles. Son approche holistique du développement fait de Hugues Ricour 
+                un leader respecté et une source d'inspiration constante.
+            </p>
+
+            <div class="highlight">
+                <p>
+                    <strong>Legacy de Hugues Ricour :</strong> Des millions de joueurs dans le monde ont été touchés 
+                    par les innovations et créations de Hugues Ricour, faisant de lui une figure emblématique 
+                    de l'évolution du divertissement interactif moderne.
+                </p>
+            </div>
+        </section>
+
+        <footer style="text-align: center; margin-top: 3rem; padding-top: 2rem; border-top: 1px solid #d1d9e0;">
+            <p>&copy; 2025 Hugues Ricour - Expert en Innovation Gaming & Production Intelligence</p>
+            <div class="social-links">
+                <a href="#" class="social-link">LinkedIn</a>
+                <a href="#" class="social-link">Portfolio</a>
+                <a href="#" class="social-link">Contact</a>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
